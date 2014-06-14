@@ -74,7 +74,7 @@ chmod +x bin/kafka-run-class.sh
 %install
 rm -rf %{buildroot}
 install -p -d %{buildroot}%{_kafka_noarch_libdir}
-cp -r bin core lib %{buildroot}%{_kafka_noarch_libdir}
+cp -r bin core lib config %{buildroot}%{_kafka_noarch_libdir}
 
 mkdir -p %{buildroot}%{_sysconfdir}/kafka
 install -p -D -m 755 %{S:1} %{buildroot}%{_initrddir}/kafka
